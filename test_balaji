@@ -1,0 +1,1737 @@
+const newman = require('newman'); // require newman in your project
+console.log('hi');
+var token = "";
+var results = [];
+//const SocksProxyAgent = require('socks-proxy-agent');
+//const requestAgent = new SocksProxyAgent({ host: 'proxy.troweprice.com', port: '8080' });
+
+// call newman.run to pass `options` object and wait for callback
+newman.run(
+{
+    collection: 'C:/Users/trpiq94/Downloads/Orchis.json',
+	insecure:'true' ,
+	exportEnvironment: 'C:/Users/trpiq94/Downloads/file.json' ,
+	//Option: '-k' ,
+    iterationCount: 1,
+	reporters: 'cli',
+	
+	globals:
+	{
+			"id": "9f72d86f-261c-459f-8bc9-21416e0487dd",
+	"values": [
+		{
+			"key": "aws-environment",
+			"value": "stage",
+			"enabled": true
+		},
+		{
+			"key": "rsp-trp-request-consumer-initial",
+			"value": "test-blue-1",
+			"enabled": true
+		},
+		{
+			"key": "test-user-id",
+			"value": "aaw9150",
+			"enabled": true
+		},
+		{
+			"key": "test-user-password",
+			"value": "aa1234",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token",
+			"value": "orchis-token=96af3813-da47-4ddb-aa1f-7030216e790f",
+			"enabled": true
+		},
+		{
+			"key": "api-key-dev",
+			"value": "apiKeyDev",
+			"enabled": true
+		},
+		{
+			"key": "api-key-stage",
+			"value": "apiKeyStage",
+			"enabled": true
+		},
+		{
+			"key": "api-key-prod",
+			"value": "apiKeyProd",
+			"enabled": true
+		},
+		{
+			"key": "api-key-current",
+			"value": "Qck6yrYik36p3JM2W12I3Fp41OsCxZHG",
+			"enabled": true
+		},
+		{
+			"key": "apikey-clx-dev",
+			"value": "NS1pGGHsvv9iBdXnTpCrUYLdJXwIiQkF",
+			"enabled": true
+		},
+		{
+			"key": "apikey-clx-stage",
+			"value": "apiKeyClxStage",
+			"enabled": true
+		},
+		{
+			"key": "service-account-auth-token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "internal-auth-token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-dev",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-stage",
+			"value": "orchis-token=96af3813-da47-4ddb-aa1f-7030216e790f",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-prod",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-dev",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-stage",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-prod",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "agreement-service-path-direct",
+			"value": "/agreement-service",
+			"enabled": true
+		},
+		{
+			"key": "document-service-path-direct",
+			"value": "/document-service",
+			"enabled": true
+		},
+		{
+			"key": "entity-service-path-direct",
+			"value": "/entity-service",
+			"enabled": true
+		},
+		{
+			"key": "investment-vehicle-service-path-direct",
+			"value": "/investment-vehicle-service",
+			"enabled": true
+		},
+		{
+			"key": "reference-service-path-direct",
+			"value": "/reference-service",
+			"enabled": true
+		},
+		{
+			"key": "transaction-service-path-direct",
+			"value": "/transaction-service",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Dev-baseURL",
+			"value": "https://ii-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Dev-baseURL",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Dev-baseURL",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-keys",
+			"value": "{\"productType\":{\"enumerationID\":80,\"enumerationName\":\"National529\"},\"@Type\":\"MutualFundAgreementKey\",\"agreementID\":\"1500042160\",\"agreementNumber\":\"5150008608\",\"checkSum\":1,\"trpcode\":\"CSQ\"}, {\"productType\":{\"enumerationID\":20,\"enumerationName\":\"Brokerage\"},\"@Type\":\"AgreementKey\",\"agreementID\":\"1500042560\",\"agreementNumber\":\"T3P19990\",\"checkSum\":7}",
+			"enabled": true
+		},
+		{
+			"key": "selected-position-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-set",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "ALB-Agreement-Service-Dev-baseURL",
+			"value": "https://internal-piagreementsvc-dv-alb-1359831752.us-east-1.elb.amazonaws.com",
+			"enabled": true
+		},
+		{
+			"key": "general-service-path-direct",
+			"value": "/general-service",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-cost-basis-election",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-funds-for-fund-family",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-alt",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "selected-value1",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value2",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value3",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value4",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value5",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-entity-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "service-account-basic-auth",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-8080-http",
+			"value": "http://localhost:8080",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-3011-http",
+			"value": "http://localhost:3011",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-8090-http",
+			"value": "http://localhost:8090",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-dev",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-stage",
+			"value": "https://ii-entity-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-prod",
+			"value": "https://ii-entity-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-dev",
+			"value": "https://ii-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-stage",
+			"value": "https://ii-agreement-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-prod",
+			"value": "https://ii-agreement-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-dev",
+			"value": "https://ii-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-stage",
+			"value": "https://ii-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-prod",
+			"value": "https://ii-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-dev",
+			"value": "https://ii-document-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-stage",
+			"value": "https://ii-document-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-prod",
+			"value": "https://ii-document-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-dev",
+			"value": "https://ii-reference-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-stage",
+			"value": "https://ii-reference-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-prod",
+			"value": "https://ii-reference-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-dev",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-stage",
+			"value": "https://ii-general-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-prod",
+			"value": "https://ii-general-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-dev",
+			"value": "https://ii-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-stage",
+			"value": "https://ii-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-prod",
+			"value": "https://ii-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "paperless-consent-apikey-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "paperless-consent-apikey-stage",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "user-comm-service-apikey-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "user-comm-service-apikey-stage",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "apikey-ias-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-direct",
+			"value": "/mobile-app-service",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-apigee-tmp",
+			"value": "",
+			"enabled": false
+		},
+		{
+			"key": "mobile-service-path-apigee",
+			"value": "/ii-mobile-app-service-secure/resources",
+			"enabled": true
+		},
+		{
+			"key": "sourceAgreementID",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-public-apigee",
+			"value": "/ii-mobile-app-service-public/resources",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-public-direct",
+			"value": "/mobile-app-service",
+			"enabled": true
+		},
+		{
+			"key": "selected-address",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "baseServiceURL",
+			"value": "https://internal-accountaccess-svc-alb-344306041.us-east-1.elb.amazonaws.com/account-access-",
+			"enabled": true
+		},
+		{
+			"key": "agreementServiceHost",
+			"value": "https://internal-accountaccess-svc-alb-344306041.us-east-1.elb.amazonaws.com/account-access-",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-current",
+			"value": "orchis-token=95d4dbcd-4408-4759-983e-7d0962c701b1",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_commonLoginBaseURL",
+			"value": "https://login-service.stage.awstrp.net/common-login",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_host",
+			"value": "www3qual.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_httpHostBaseCommonLogin",
+			"value": "https://www3qual.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_lookupBaseUrl",
+			"value": "https://internal-common-login-otp-ecs-273740840.us-east-1.elb.amazonaws.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_tokenExchangeBaseURL",
+			"value": "https://token-exchange.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "pd-session-cookies",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "validSession_ID",
+			"value": "4gnf6hlrbc00opm5r19ub44a78",
+			"enabled": true
+		},
+		{
+			"key": "generalServiceHost",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "entityServiceHost",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-sandbox",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "lastword",
+			"value": "name",
+			"enabled": true
+		},
+		{
+			"key": "mfaIdentifier",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-document-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-document-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-document-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-entity-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-entity-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-entity-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-general-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-general-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-general-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-reference-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-reference-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-reference-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-transaction-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-transaction-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-transaciton-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-document-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-document-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-document-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-entity-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-entity-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-entity-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-general-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-general-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-general-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-reference-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-reference-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-reference-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-transaction-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-transaction-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-transaciton-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-agreement-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-agreement-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-document-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-document-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-document-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-entity-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-entity-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-general-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-general-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-reference-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-reference-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-reference-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-investment-vehicle-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-localhost-http",
+			"value": "http://localhost:33501",
+			"enabled": true
+		},
+		{
+			"key": null,
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "headers",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "headers-service-account",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "http://api.confidence.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "Account-Access-service-path-direct",
+			"value": "/account-access-service/v3",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-10-22T19:15:06.326Z",
+	"_postman_exported_using": "Postman/9.1.1"
+	}	
+	
+},
+{const newman = require('newman'); // require newman in your project
+console.log('hi');
+var token = "";
+var results = [];
+//const SocksProxyAgent = require('socks-proxy-agent');
+//const requestAgent = new SocksProxyAgent({ host: 'proxy.troweprice.com', port: '8080' });
+
+// call newman.run to pass `options` object and wait for callback
+newman.run(
+{
+    collection: 'C:/Users/trpiq94/Downloads/Orchis.json',
+	insecure:'true' ,
+	exportEnvironment: 'C:/Users/trpiq94/Downloads/file.json' ,
+	//Option: '-k' ,
+    iterationCount: 1,
+	reporters: 'cli',
+	
+	globals:
+	{
+			"id": "9f72d86f-261c-459f-8bc9-21416e0487dd",
+	"values": [
+		{
+			"key": "aws-environment",
+			"value": "stage",
+			"enabled": true
+		},
+		{
+			"key": "rsp-trp-request-consumer-initial",
+			"value": "test-blue-1",
+			"enabled": true
+		},
+		{
+			"key": "test-user-id",
+			"value": "aaw9150",
+			"enabled": true
+		},
+		{
+			"key": "test-user-password",
+			"value": "aa1234",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token",
+			"value": "orchis-token=96af3813-da47-4ddb-aa1f-7030216e790f",
+			"enabled": true
+		},
+		{
+			"key": "api-key-dev",
+			"value": "apiKeyDev",
+			"enabled": true
+		},
+		{
+			"key": "api-key-stage",
+			"value": "apiKeyStage",
+			"enabled": true
+		},
+		{
+			"key": "api-key-prod",
+			"value": "apiKeyProd",
+			"enabled": true
+		},
+		{
+			"key": "api-key-current",
+			"value": "Qck6yrYik36p3JM2W12I3Fp41OsCxZHG",
+			"enabled": true
+		},
+		{
+			"key": "apikey-clx-dev",
+			"value": "NS1pGGHsvv9iBdXnTpCrUYLdJXwIiQkF",
+			"enabled": true
+		},
+		{
+			"key": "apikey-clx-stage",
+			"value": "apiKeyClxStage",
+			"enabled": true
+		},
+		{
+			"key": "service-account-auth-token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "internal-auth-token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-dev",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-stage",
+			"value": "orchis-token=96af3813-da47-4ddb-aa1f-7030216e790f",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-prod",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-dev",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-stage",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "RSP-Unity-Service-Instance-Name-prod",
+			"value": "Main",
+			"enabled": true
+		},
+		{
+			"key": "agreement-service-path-direct",
+			"value": "/agreement-service",
+			"enabled": true
+		},
+		{
+			"key": "document-service-path-direct",
+			"value": "/document-service",
+			"enabled": true
+		},
+		{
+			"key": "entity-service-path-direct",
+			"value": "/entity-service",
+			"enabled": true
+		},
+		{
+			"key": "investment-vehicle-service-path-direct",
+			"value": "/investment-vehicle-service",
+			"enabled": true
+		},
+		{
+			"key": "reference-service-path-direct",
+			"value": "/reference-service",
+			"enabled": true
+		},
+		{
+			"key": "transaction-service-path-direct",
+			"value": "/transaction-service",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Dev-baseURL",
+			"value": "https://ii-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Dev-baseURL",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Dev-baseURL",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-keys",
+			"value": "{\"productType\":{\"enumerationID\":80,\"enumerationName\":\"National529\"},\"@Type\":\"MutualFundAgreementKey\",\"agreementID\":\"1500042160\",\"agreementNumber\":\"5150008608\",\"checkSum\":1,\"trpcode\":\"CSQ\"}, {\"productType\":{\"enumerationID\":20,\"enumerationName\":\"Brokerage\"},\"@Type\":\"AgreementKey\",\"agreementID\":\"1500042560\",\"agreementNumber\":\"T3P19990\",\"checkSum\":7}",
+			"enabled": true
+		},
+		{
+			"key": "selected-position-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-set",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "ALB-Agreement-Service-Dev-baseURL",
+			"value": "https://internal-piagreementsvc-dv-alb-1359831752.us-east-1.elb.amazonaws.com",
+			"enabled": true
+		},
+		{
+			"key": "general-service-path-direct",
+			"value": "/general-service",
+			"enabled": true
+		},
+		{
+			"key": "selected-agreement-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-cost-basis-election",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-funds-for-fund-family",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-alt",
+			"value": "orchis-token=",
+			"enabled": true
+		},
+		{
+			"key": "selected-value1",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value2",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value3",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value4",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-value5",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "selected-entity-key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "service-account-basic-auth",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-8080-http",
+			"value": "http://localhost:8080",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-3011-http",
+			"value": "http://localhost:3011",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-8090-http",
+			"value": "http://localhost:8090",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-dev",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-stage",
+			"value": "https://ii-entity-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Route53-prod",
+			"value": "https://ii-entity-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-dev",
+			"value": "https://ii-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-stage",
+			"value": "https://ii-agreement-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Route53-prod",
+			"value": "https://ii-agreement-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-dev",
+			"value": "https://ii-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-stage",
+			"value": "https://ii-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Route53-prod",
+			"value": "https://ii-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-dev",
+			"value": "https://ii-document-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-stage",
+			"value": "https://ii-document-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Route53-prod",
+			"value": "https://ii-document-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-dev",
+			"value": "https://ii-reference-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-stage",
+			"value": "https://ii-reference-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Route53-prod",
+			"value": "https://ii-reference-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-dev",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-stage",
+			"value": "https://ii-general-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Route53-prod",
+			"value": "https://ii-general-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-dev",
+			"value": "https://ii-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-stage",
+			"value": "https://ii-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Route53-prod",
+			"value": "https://ii-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "paperless-consent-apikey-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "paperless-consent-apikey-stage",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "user-comm-service-apikey-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "user-comm-service-apikey-stage",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "apikey-ias-dev",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-direct",
+			"value": "/mobile-app-service",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-apigee-tmp",
+			"value": "",
+			"enabled": false
+		},
+		{
+			"key": "mobile-service-path-apigee",
+			"value": "/ii-mobile-app-service-secure/resources",
+			"enabled": true
+		},
+		{
+			"key": "sourceAgreementID",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-public-apigee",
+			"value": "/ii-mobile-app-service-public/resources",
+			"enabled": true
+		},
+		{
+			"key": "mobile-service-path-public-direct",
+			"value": "/mobile-app-service",
+			"enabled": true
+		},
+		{
+			"key": "selected-address",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "baseServiceURL",
+			"value": "https://internal-accountaccess-svc-alb-344306041.us-east-1.elb.amazonaws.com/account-access-",
+			"enabled": true
+		},
+		{
+			"key": "agreementServiceHost",
+			"value": "https://internal-accountaccess-svc-alb-344306041.us-east-1.elb.amazonaws.com/account-access-",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-current",
+			"value": "orchis-token=95d4dbcd-4408-4759-983e-7d0962c701b1",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_commonLoginBaseURL",
+			"value": "https://login-service.stage.awstrp.net/common-login",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_host",
+			"value": "www3qual.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_httpHostBaseCommonLogin",
+			"value": "https://www3qual.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_lookupBaseUrl",
+			"value": "https://internal-common-login-otp-ecs-273740840.us-east-1.elb.amazonaws.com",
+			"enabled": true
+		},
+		{
+			"key": "aws_clx_tokenExchangeBaseURL",
+			"value": "https://token-exchange.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "pd-session-cookies",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "validSession_ID",
+			"value": "4gnf6hlrbc00opm5r19ub44a78",
+			"enabled": true
+		},
+		{
+			"key": "generalServiceHost",
+			"value": "https://ii-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "entityServiceHost",
+			"value": "https://ii-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "orchis-token-sandbox",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "lastword",
+			"value": "name",
+			"enabled": true
+		},
+		{
+			"key": "mfaIdentifier",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-agreement-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-document-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-document-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-document-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-entity-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-entity-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-entity-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-general-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-general-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-general-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-reference-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-reference-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-reference-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-1-Route53-dev",
+			"value": "https://ii-rsp-transaction-service-blue-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-2-Route53-dev",
+			"value": "https://ii-rsp-transaction-service-blue-2.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Green-1-Route53-dev",
+			"value": "https://ii-rsp-transaciton-service-green-1.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-agreement-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-document-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-document-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-document-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-entity-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-entity-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-entity-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-general-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-general-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-general-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-reference-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-reference-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-reference-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-1-Route53-stage",
+			"value": "https://ii-rsp-transaction-service-blue-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Blue-2-Route53-stage",
+			"value": "https://ii-rsp-transaction-service-blue-2.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Green-1-Route53-stage",
+			"value": "https://ii-rsp-transaciton-service-green-1.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-agreement-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-agreement-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Agreement-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-agreement-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-document-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-document-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Document-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-document-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-entity-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-entity-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Entity-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-entity-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-general-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-general-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "General-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-general-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-reference-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-reference-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Reference-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-reference-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-transaction-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-transaction-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Transaction-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-transaction-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-dev",
+			"value": "https://ii-rsp-investment-vehicle-service.dev.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-stage",
+			"value": "https://ii-rsp-investment-vehicle-service.stage.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Investment-Vehicle-Service-Main-Route53-prod",
+			"value": "https://ii-rsp-investment-vehicle-service.prod.awstrp.net",
+			"enabled": true
+		},
+		{
+			"key": "Sandbox-localhost-http",
+			"value": "http://localhost:33501",
+			"enabled": true
+		},
+		{
+			"key": null,
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "headers",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "headers-service-account",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "http://api.confidence.troweprice.com",
+			"enabled": true
+		},
+		{
+			"key": "Account-Access-service-path-direct",
+			"value": "/account-access-service/v3",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-10-22T19:15:06.326Z",
+	"_postman_exported_using": "Postman/9.1.1"
+	}	
+	
+},
+{
+	collection: 'C:/Users/trpiq94/Downloads/Test.postman_collection.json',
+	environment: require("C:/Users/trpiq94/Downloads/file.json"),	
+	iterationCount: 1,
+	reporters: 'cli'
+	
+}, function (err) {
+	if (err) { throw err; }
+    console.log('collection run complete!');
+});
+	collection: 'C:/Users/trpiq94/Downloads/Test.postman_collection.json',
+	environment: require("C:/Users/trpiq94/Downloads/file.json"),	
+	iterationCount: 1,
+	reporters: 'cli'
+	
+}, function (err) {
+	if (err) { throw err; }
+    console.log('collection run complete!');
+});
